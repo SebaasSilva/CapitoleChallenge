@@ -9,7 +9,7 @@ import com.challenge.repository.PriceRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class PriceService implements PriceServiceImpl {
+public class PriceService {
 
   private static final String PRICE_NOT_FOUND_WITH = "Price not found with: ";
 
@@ -24,7 +24,6 @@ public class PriceService implements PriceServiceImpl {
    * @return PriceDetail object with the DataSource information.
    * @throws PriceNotFoundException This exception show up when there is no data in the DataSource.
    */
-  @Override
   public PriceDetail getPriceDetailsByBrandIdAndProductId(PriceRequest priceRequest)
       throws PriceNotFoundException {
     return priceRepository
